@@ -122,24 +122,36 @@
             <div class="magic-container">
                 <h3>Magic</h3>
                 <div class="magic-body">
-                    <ul>
-                        <li class="lists">Sample Item 1</li>
-                        <li class="lists">Sample Item 2</li>
-                        <li class="lists">Sample Item 3</li>
-                        <li class="lists">Sample Item 4</li>
+                    <textarea name="" id="text-area" cols="25" rows="12">
+                        Sample Item 1
+                        Sample Item 2
+                        Sample Item 3
+                        Sample Item 4
+
+                        Sample Item 5
+                        Sample Item 6
+
+
+                        Sample Item 7
+                    </textarea>
+                    <!-- <ul>
+                        <li id="li-1" class="lists">Sample Item 1</li>
+                        <li id="li-2" class="lists">Sample Item 2</li>
+                        <li id="li-3" class="lists">Sample Item 3</li>
+                        <li id="li-4" class="lists">Sample Item 4</li>
                         <li id="li-5" class="lists">Sample Item 5</li>
-                        <li class="lists">Sample Item 6</li>
+                        <li id="li-6" class="lists">Sample Item 6</li>
                         <li id="li-7" class="lists">Sample Item 7</li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="btn-container">
-                    <button>Clear it</button>
+                    <button onclick="deleteAll()">Clear it</button>
                     <button onclick="capitalize()">Capitalize</button>
-                    <button>Sort</button>
-                    <button>Reverse</button>
-                    <button>Strip Blank</button>
-                    <button>Add Numbers</button>
-                    <button>Shuffle</button>
+                    <button onclick="sort()">Sort</button>
+                    <button onclick="reverse()">Reverse</button>
+                    <button onclick="stripBlank()">Strip Blank</button>
+                    <button onclick="addNumbers()">Add Numbers</button>
+                    <button onclick="shuffle()">Shuffle</button>
                 </div>
             </div>
         </div>
