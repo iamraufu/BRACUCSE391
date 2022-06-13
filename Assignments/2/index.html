@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>BRACU CSE391 Assignment 2</title>
+</head>
+
+<body onload="generateQuote()">
+    <!-- Quote Box -->
+    <div class="quote-box-container">
+        <h1 class="title">Assignment 2: JavaScript Programming</h1>
+        <div class="container">
+            <h2 class="sub-title">1.1 Quote Box</h2>
+            <div style="display:flex">
+                <div id="quote-container" class="quote-container">
+                    <span id="quote"></span>
+                </div>
+                <div class="">
+                    <div onclick="changeStyle('box1')" class="box">
+                        <div class="box-1"></div>
+                    </div>
+                    <div onclick="changeStyle('box2')" class="box">
+                        <div class="box-2"></div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <div onclick="changeStyle('box3')" class="box">
+                        <div class="box-3"></div>
+                    </div>
+                    <div onclick="changeStyle('box4')" class="box">
+                        <div class="box-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Converter -->
+    <div class="hero-converter-container">
+        <div class="container">
+            <h2 class="sub-title">1.2 Hero Converter</h2>
+
+            <div class="hero-converter">
+                <label for="unit">Convert</label>
+                <input type="text" id="unit" name="unit" value="1">
+
+                <select name="convert-to" id="converter">
+                    <option value="lb_to_kg">lb to kg</option>
+                    <option value="kg_to_lb">kg to lb</option>
+                </select>
+
+                <input type="submit" onclick="convert(converter.value, unit.value)" value="Go">
+
+                <span id="result">0.4536 kilograms</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Part 2 -->
+    <div class="part-2-container">
+        <div class="container">
+            <h2 class="sub-title">Part 2</h2>
+        </div>
+        <table width="50%" border="0" align="center">
+            <tr>
+                <td width="13%">Input Series of Number:</td>
+                <td width="29%"><input onkeyup="calculate()" name="box1" type="text" id="box1" value="12,12,22,9,1,20" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Max :</td>
+                <td>
+                    <div id="max">22</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Min :</td>
+                <td>
+                    <div id="min">1</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Sum :</td>
+                <td>
+                    <div id="sum">76</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Average :</td>
+                <td>
+                    <div id="avg">12.6666666666667</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Reverse Order :</td>
+                <td>
+                    <div id="reverse">20,1,9,22,12,12</div>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Part 3 -->
+    <div class="part-3-container">
+        <div class="container">
+            <h2 class="sub-title">Part 3</h2>
+            <div class="magic-container">
+                <h3>Magic</h3>
+                <div class="magic-body">
+                    <ul>
+                        <li class="lists">Sample Item 1</li>
+                        <li class="lists">Sample Item 2</li>
+                        <li class="lists">Sample Item 3</li>
+                        <li class="lists">Sample Item 4</li>
+                        <li id="li-5" class="lists">Sample Item 5</li>
+                        <li class="lists">Sample Item 6</li>
+                        <li id="li-7" class="lists">Sample Item 7</li>
+                    </ul>
+                </div>
+                <div class="btn-container">
+                    <button>Clear it</button>
+                    <button onclick="capitalize()">Capitalize</button>
+                    <button>Sort</button>
+                    <button>Reverse</button>
+                    <button>Strip Blank</button>
+                    <button>Add Numbers</button>
+                    <button>Shuffle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
