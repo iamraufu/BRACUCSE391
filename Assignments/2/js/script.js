@@ -75,7 +75,7 @@ Array.prototype.min = function () {
 };
 
 function deleteAll(){
-    document.getElementById('text-area').innerHTML = '';
+    document.getElementById('text-area').value = '';
 }
 
 function capitalize() {
@@ -85,8 +85,6 @@ function capitalize() {
     var newLines = [];
     for (var i = 0; i < lines.length; i++) {
         newLines.push(lines[i].toUpperCase());
-
-        // newLines.push(lines[i].charAt(0).toUpperCase() + lines[i].slice(1));
     }
     document.getElementById('text-area').value = newLines.join('\n');
 }
@@ -94,13 +92,18 @@ function capitalize() {
 function sort(){
     // rearranges the lines into sorted alphabetical order
     var text = document.getElementById('text-area').value;
-    var lines = text.split('\n');
+    var lines = text.split('');
     var newLines = [];
+    
     for (var i = 0; i < lines.length; i++) {
         newLines.push(lines[i].toLowerCase());
+        // let newLines = text.split('').sort().join('');
+    //     document.getElementById('text-area').value = newLines;
     }
     newLines.sort();
-    document.getElementById('text-area').value = newLines.join('\n');
+    document.getElementById('text-area').value = newLines.join('');
+    // document.getElementById('text-area').value = text.split('').sort().join('');
+    
 }
 
 function reverse (){
